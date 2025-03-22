@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function() {
+        var arr = [1, 2, 3];
+        // 将原生数组转换为jQuery对象
+        $(arr).each(function (index, value) {
+            console.log("索引：" + index + "，值：" + value);
+        });
+        // isEmptyObject方法示例
+        var emptyObj = {};
+        var nonEmptyObj = { name: "John" };
+        console.log("空对象检查：", $.isEmptyObject(emptyObj));
+        console.log("非空对象检查：", $.isEmptyObject(nonEmptyObj));
+        // isPlainObject方法示例
+        var plainObj = {};
+        var nonPlainObj = new Array();
+        console.log("普通对象检查：", $.isPlainObject(plainObj));
+        console.log("非普通对象检查：", $.isPlainObject(nonPlainObj));
+        // extend方法示例
+        var obj1 = { a: 1, b: 2 };
+        var obj2 = { b: 3, c: 4 };
+        $.extend(obj1, obj2);
+        console.log("合并后的对象：", obj1);
+    });
+</script>
+</body>
+</html>

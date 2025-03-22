@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<button id="startAnimation">开始动画</button>
+<div id="box1"></div>
+<div id="box2"></div>
+<script>
+    $(document).ready(function () {
+        // 为按钮添加点击事件
+        $('#startAnimation').click(function () {
+            // 让两个div元素同时执行滑动动画
+            $('#box1').slideDown(2000);
+            $('#box2').slideUp(2000);
+
+            // 使用:animated选择器，为正在执行动画的元素添加边框
+            $(':animated').css('border', '5px solid red');
+        });
+    });
+</script>
+</body>
+
+</html>

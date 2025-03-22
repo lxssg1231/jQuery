@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<h1 id="mainTitle">这是标题</h1>
+<p class="text">这是段落文本1</p>
+<div>这是一个div</div>
+<p class="text">这是段落文本2</p>
+<script>
+    // 使用群组选择器，选取id为mainTitle的元素和class为text的元素，并修改它们的颜色
+    $('#mainTitle,.text').css('color','red');
+
+    // 使用通用选择器，选取所有元素，然后为它们添加一个灰色的边框
+    $('*').css('border', '1px solid gray');
+</script>
+</body>
+</html>

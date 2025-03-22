@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="one">这是id为one的div</div>
+<div>这是一个div</div>
+<div id="two">这是id为two的div</div>
+<p>这是一个段落</p>
+<div>这是另一个div</div>
+<script>
+    // // 改变<body>内所有<div>的背景色为 #bbffaa
+    // $('body div').css('backgroundColor', '#bbffaa');
+
+    // // 改变<body>内子<div>的背景色为 #bbffaa
+    // $('body>div').css('backgroundColor', '#bbffaa');
+    //
+    // // 改变id为one的下一个<div>的背景色为 #bbffaa
+    // $('#one+div').css('backgroundColor', '#bbffaa');
+    //
+    // // 改变id为two的元素后面的所有兄弟<div>的元素的背景色为 #bbffaa
+    // $('#two~div').css('backgroundColor', '#bbffaa');
+    //
+    // 改变id为two的元素所有<p>兄弟元素的背景色为 #bbffaa
+    $('#two').siblings('p').css('backgroundColor', '#bbffaa');
+</script>
+</body>
+</html>

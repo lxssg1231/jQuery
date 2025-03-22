@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        /* 隐藏一个div */
+        #hiddenDiv {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <button type="button">普通按钮</button>
+    <input type="file" />
+    <input type="hidden" value="隐藏数据" />
+    <div id="hiddenDiv">这是一个隐藏的div</div>
+</form>
+<script>
+    // 为所有按钮添加点击事件，点击时弹出提示
+    $(":button").click(function () {
+        alert("你点击了按钮");
+    });
+
+    // 为文件域添加change事件，当选择文件时提示
+    $(":file").change(function () {
+        alert("你选择了文件");
+    });
+
+    // 显示所有匹配:hidden选择器的元素
+    $("input:hidden, div:hidden").show();
+</script>
+</body>
+
+</html>

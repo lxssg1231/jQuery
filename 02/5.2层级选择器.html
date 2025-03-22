@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">第一个div</div>
+<div id="div2">第二个div（紧邻第一个）</div>
+<p>一个段落</p>
+<div id="div3">第三个div</div>
+<script>
+    // 使用紧邻同辈元素选择器，选取紧邻id为div1的同辈div元素，并改变其背景颜色
+    $('#div1 + div').css('backgroundColor', 'lightblue');
+
+    // 使用相邻同辈元素选择器，选取id为div1之后的所有同辈div元素，并改变其文本颜色
+    $('#div1 ~ div').css('color','red');
+</script>
+</body>
+</html>

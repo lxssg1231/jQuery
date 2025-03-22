@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="prev1">前一个元素1</div>
+<div id="target">目标元素</div>
+<div id="next1">后一个元素1</div>
+<div id="next2">后一个元素2</div>
+<div id="prev2">前一个元素2</div>
+<!--<script>-->
+<!--    // 获取id为target的元素-->
+<!--    var targetElement = $('#target');-->
+<!--    // 使用next方法，获取其后的单个同辈元素，并添加背景颜色-->
+<!--    targetElement.next().css('backgroundColor', 'lightblue');-->
+<!--    // 使用nextAll方法，获取其后的所有同辈元素，并添加字体颜色-->
+<!--    targetElement.nextAll().css('color','red');-->
+<!--    // 使用nextUntil方法，获取其后的同辈元素直到id为next2的元素（不包含它），并添加边框样式-->
+<!--    targetElement.nextUntil('#next2').css('borderStyle', 'dashed');-->
+<!--    // 使用prev方法，获取其前的单个同辈元素，并添加黄色背景-->
+<!--    targetElement.prev().css('backgroundColor', 'lightyellow');-->
+<!--    // 使用prevAll方法，获取其前的所有同辈元素，并添加绿色背景-->
+<!--    targetElement.prevAll().css('backgroundColor', 'lightgreen');-->
+<!--    // 使用prevUntil方法，获取其前的同辈元素直到id为prev2的元素（不包含它），并改变字体大小-->
+<!--    targetElement.prevUntil('#prev2').css('fontSize', '18px');-->
+<!--    // 使用siblings方法，获取其所有同辈元素，并添加紫色边框-->
+<!--    targetElement.siblings().css('borderColor', 'purple');-->
+<!--</script>-->
+</body>
+</html>

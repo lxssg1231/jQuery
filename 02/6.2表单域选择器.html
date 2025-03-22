@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<form>
+    <input type="radio" name="gender" value="male"> 男
+    <input type="radio" name="gender" value="female"> 女
+    <br>
+    <input type="checkbox" name="hobbies" value="reading"> 阅读
+    <input type="checkbox" name="hobbies" value="sports"> 运动
+    <br>
+    <input type="submit" value="提交">
+    <input type="image" src="submit.png" alt="提交图像按钮" width="50" height="20">
+    <input type="reset" value="重置">
+</form>
+<script>
+    // 为所有单选按钮添加点击事件，点击时弹出提示
+    $(":radio").click(function () {
+        alert("你点击了单选按钮");
+    });
+    // 选中所有复选框
+    $(":checkbox").prop("checked", true);
+    // 为提交按钮添加点击事件，阻止表单默认提交行为并提示
+    $(":submit").click(function (e) {
+        e.preventDefault();
+        alert("你点击了提交按钮");
+    });
+    // 为图像域添加点击事件，提示已点击图像提交按钮
+    $(":image").click(function () {
+        alert("你点击了图像提交按钮");
+    });
+    // 为重置按钮添加点击事件，提示已点击重置按钮
+    $(":reset").click(function () {
+        alert("你点击了重置按钮");
+    });
+</script>
+</body>
+
+</html>

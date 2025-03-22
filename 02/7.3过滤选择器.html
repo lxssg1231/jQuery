@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        li {
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>列表项1</li>
+    <li>列表项2</li>
+    <li>列表项3</li>
+    <li>列表项4</li>
+</ul>
+<script>
+    // 使用:even选择器，为索引是偶数的列表项添加背景颜色
+    $('li:even').css('backgroundColor', 'lightblue');
+
+    // 使用:odd选择器，为索引是奇数的列表项添加字体加粗样式
+    $('li:odd').css('fontWeight', 'bold');
+</script>
+</body>
+</html>

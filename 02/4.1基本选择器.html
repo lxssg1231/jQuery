@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="mainDiv">这是主div</div>
+<p class="info">这是第一段信息</p>
+<p class="info">这是第二段信息</p>
+<ul>
+    <li>列表项1</li>
+</ul>
+<script>
+    // 使用id选择器选取id为mainDiv的元素，并改变其背景颜色
+    $('#mainDiv').css('background-color', 'lightblue');
+
+    // 使用类选择器选取所有class为info的元素，并改变其文本颜色
+    $('.info').css('color','red');
+
+    // 使用元素选择器选取所有li元素，并在控制台输出其文本内容
+    $('li').each(function () {
+        console.log($(this).text());
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>第一个div</div>
+<div>第二个div</div>
+<div>第三个div</div>
+<div>第四个div</div>
+<script>
+    // 使用:eq选择器，为索引等于2的div元素添加背景颜色
+    $('div:eq(2)').css('backgroundColor', 'lightgreen');
+
+    // 使用:gt选择器，为索引大于1的div元素添加字体颜色
+    $('div:gt(1)').css('color','red');
+
+    // 使用:lt选择器，为索引小于3的div元素添加边框样式
+    $('div:lt(3)').css('borderStyle', 'dashed');
+</script>
+</body>
+</html>

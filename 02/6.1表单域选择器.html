@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="用户名">
+    <input type="password" placeholder="密码">
+    <textarea placeholder="留言"></textarea>
+    <select>
+        <option value="option1">选项1</option>
+        <option value="option2">选项2</option>
+    </select>
+    <button type="submit">提交</button>
+</form>
+<script>
+    // 使用:input选择器，为所有匹配的元素添加边框
+    $(":input").css("border", "1px solid blue");
+
+    // 使用:text选择器，为单行文本框设置默认值
+    $(":text").val("请输入用户名");
+
+    // 使用:password选择器，为密码框设置提示信息
+    $(":password").attr("placeholder", "请输入6位以上密码");
+</script>
+</body>
+</html>

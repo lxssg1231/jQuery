@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="grandparent">
+    <div id="parent">
+        <div id="child">子元素</div>
+    </div>
+</div>
+<!--<script>-->
+<!--    // 获取id为child的元素-->
+<!--    var childElement = $('#child');-->
+
+<!--    // 使用parents方法，获取其所有祖先元素，并添加背景颜色-->
+<!--    childElement.parents().css('backgroundColor', 'lightblue');-->
+
+<!--    // 使用parentsUntil方法，获取其祖先元素直到id为grandparent的元素（不包含它），并添加字体颜色-->
+<!--    childElement.parentsUntil('#grandparent').css('color','red');-->
+
+<!--    // 使用parent方法，获取其直接父元素，并添加边框样式-->
+<!--    childElement.parent().css('borderStyle', 'dashed');-->
+
+<!--    // 使用closest方法，从当前元素向上找class为parent的元素（这里没有，假设有的话），并添加黄色背景-->
+<!--    // 这里仅展示语法，实际页面没有class为parent的元素-->
+<!--    childElement.closest('.parent').css('backgroundColor', 'lightyellow');-->
+
+<!--    // 使用offsetParent方法，获取已定位的父元素（这里简单假设parent元素已定位），并添加绿色背景-->
+<!--    childElement.offsetParent().css('backgroundColor', 'lightgreen');-->
+<!--</script>-->
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂函数$()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    // 动态创建一个p元素的HTML标记字符串
+    const htmlStr = '<p>这是动态创建的段落</p>';
+    // 使用工厂函数$()包装动态创建的DOM元素
+    const $newElement = $(htmlStr);
+    // 将包装后的元素添加到页面中的container div里
+    $('#container').append($newElement);
+</script>
+</body>
+</html>

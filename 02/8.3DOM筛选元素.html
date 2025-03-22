@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">第一个div</div>
+<div id="special">特殊div</div>
+<script>
+    // 选中class为box的div元素
+    var boxDiv = $('.box');
+    // 使用is方法检查选中的元素是否匹配id为special的选择器
+    var isMatch = boxDiv.is('#special');
+    if (isMatch) {
+        console.log('选中的元素匹配指定选择器');
+    } else {
+        console.log('选中的元素不匹配指定选择器');
+    }
+
+    // 选中id为special的div元素
+    var specialDiv = $('#special');
+    // 使用is方法检查选中的元素是否匹配class为box的选择器
+    var anotherMatch = specialDiv.is('.box');
+    if (anotherMatch) {
+        console.log('选中的元素匹配指定选择器');
+    } else {
+        console.log('选中的元素不匹配指定选择器');
+    }
+</script>
+</body>
+
+
+
+</html>

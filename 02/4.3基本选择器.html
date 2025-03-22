@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<h1 id="one">这是标题</h1>
+<p>这是段落1</p>
+<p>这是段落2</p>
+<script>
+    // 改变 id 为 one 的元素的背景色为 红色
+    $('#one').css("backgroundColor", "red");
+
+    // 改变元素名为 <p> 的所有元素的背景色为 #bbffaa, 字体颜色为红色
+    $('p').css({
+        color: "red",
+        backgroundColor: "#bbffaa"
+    });
+
+    // 改变第一个<p>元素的背景色为红色
+    $('p').eq(0).css("backgroundColor", "red");
+
+    // 改变所有<h1>元素和 id 为 one 的元素的背景色为 #bbffaa
+    $('h1, #one').css("backgroundColor", "#bbffaa");
+</script>
+</body>
+</html>

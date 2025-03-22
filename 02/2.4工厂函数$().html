@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂函数$()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<h1 id="mainTitle">欢迎来到我的网页</h1>
+<p class="content">这是一段示例文本。</p>
+<script>
+    // 通过ID选择器选取id为mainTitle的元素
+    const $title = $('#mainTitle');
+    // 修改选取元素的文本内容
+    $title.text('新的页面标题');
+
+    // 通过类选择器选取class为content的元素
+    const $contentPara = $('.content');
+    // 修改选取元素的文本颜色
+    $contentPara.css('color','red');
+</script>
+</body>
+</html>

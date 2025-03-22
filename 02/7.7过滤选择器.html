@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div,
+        p,
+        tr,
+        h1 {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>第一个div</div>
+<div>第二个div</div>
+<p id="one">id为one的p元素</p>
+<p>普通p元素1</p>
+<p>普通p元素2</p>
+<p>普通p元素3</p>
+<p>普通p元素4</p>
+<table>
+    <tr>第一行</tr>
+    <tr>第二行</tr>
+    <tr>第三行</tr>
+</table>
+<h1>标题元素</h1>
+<button id="animateBtn">启动动画</button>
+<div id="animateDiv" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        // 改变第一个div元素的背景色-->
+<!--        $("div:first").css('backgroundColor', '#bbffaa');-->
+
+<!--        // 改变id不为one的所有p元素的背景色-->
+<!--        $("p:not('#one')").css('backgroundColor', '#bbffaa');-->
+
+<!--        // 改变索引值为偶数的tr元素的背景色-->
+<!--        $("tr:even").css('backgroundColor', '#bbffaa');-->
+
+<!--        // 改变索引值大于3且为奇数的p元素的背景色-->
+<!--        $("p:gt(3):odd").css('backgroundColor', '#bbffaa');-->
+
+<!--        // 改变所有的标题元素的背景色-->
+<!--        $(":header").css('backgroundColor', '#bbffaa');-->
+
+<!--        // 为按钮添加点击事件来启动动画-->
+<!--        $('#animateBtn').click(function () {-->
+<!--            $('#animateDiv').fadeIn(1000);-->
+<!--            // 尝试改变正在执行动画的元素的背景色-->
+<!--            $(':animated').css('backgroundColor', '#bbffaa');-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+</body>
+
+</html>

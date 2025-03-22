@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">第一个div</div>
+<div class="special">第二个div</div>
+<div id="div3">第三个div</div>
+<script>
+    // 先选中所有的div元素，然后使用not选择器去除class为special的div元素
+    // 并为剩余的div元素添加背景颜色
+    $('div:not(.special)').css('backgroundColor', 'lightblue');
+</script>
+</body>
+</html>

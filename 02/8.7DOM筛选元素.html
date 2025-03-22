@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<script>
+    // grep方法示例
+    var arr1 = [1, 2, 3, 4, 5];
+    var newArr1 = $.grep(arr1, function (value) {
+        return value > 3;
+    });
+    console.log("grep筛选后的数组:", newArr1);
+    console.log("原始数组:", arr1);
+
+    // inArray方法示例
+    var arr2 = ["apple", "banana", "cherry"];
+    var index = $.inArray("banana", arr2);
+    console.log("指定值的索引:", index);
+
+    // makeArray方法示例
+    var likeArray = { 0: "one", 1: "two", length: 2 };
+    var realArray = $.makeArray(likeArray);
+    console.log("转换后的真正数组:", realArray);
+
+    // map方法示例
+    var arr3 = [1, 2, 3];
+    var newArr3 = $.map(arr3, function (value) {
+        return value * 2;
+    });
+    console.log("map转换后的数组:", newArr3);
+
+    // merge方法示例
+    var arr4 = [1, 2];
+    var arr5 = [3, 4];
+    var mergedArray = $.merge(arr4, arr5);
+    console.log("合并后的数组:", mergedArray);
+
+    // unique方法示例
+    var arr6 = [1, 2, 2, 3, 3, 3];
+    var uniqueArray = $.unique(arr6);
+    console.log("去除重复元素后的数组:", uniqueArray);
+
+    // isArray方法示例
+    var arrayExample = [1, 2, 3];
+    var notArrayExample = { a: 1 };
+    console.log("检查是否为数组1:", $.isArray(arrayExample));
+    console.log("检查是否为数组2:", $.isArray(notArrayExample));
+
+    // toArray方法示例
+    var $domElements = $("body *");
+    var domArray = $domElements.toArray();
+    console.log("转换后的DOM元素数组:", domArray);
+
+    // parseJSON方法示例
+    var jsonStr = '{"name": "John", "age": 30}';
+    var jsonObj = $.parseJSON(jsonStr);
+    console.log("解析后的JavaScript对象:", jsonObj);
+</script>
+</body>
+</html>

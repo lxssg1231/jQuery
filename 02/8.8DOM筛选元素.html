@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        // globalEval方法示例
+        var codeStr = "function sayHello() { console.log('Hello!'); }";
+        $.globalEval(codeStr);
+        sayHello();
+        // isFunction方法示例
+        function testFunc() {}
+        var testObj = {};
+        console.log("检测testFunc是否为函数:", $.isFunction(testFunc));
+        console.log("检测testObj是否为函数:", $.isFunction(testObj));
+        // proxy方法示例
+        var obj = {
+            name: "Alice",
+            sayName: function () {
+                console.log(this.name);
+            }
+        };
+        var newFunc = $.proxy(obj.sayName, obj);
+        newFunc();
+        // noop方法示例
+        var emptyFn = $.noop();
+        // 这里即使调用空函数，也不会有实际操作输出
+        emptyFn();
+    });
+</script>
+</body>
+</html>

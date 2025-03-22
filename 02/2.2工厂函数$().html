@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂函数$()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="div1">这是第一个div</div>
+<div id="div2">这是第二个div</div>
+<script>
+    // 获取DOM元素数组
+    const divElements = [document.getElementById('div1'), document.getElementById('div2')];
+    // 使用工厂函数$()将DOM元素数组转化为jQuery对象
+    const $divs = $(divElements);
+    // 为转化后的jQuery对象修改内容
+    $divs.text("通过jQuery修改后的内容！");
+
+</script>
+</body>
+</html>

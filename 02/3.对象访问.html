@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery对象操作</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!--无序列表-->
+<ul>
+<!--列表项元素-->
+    <li id="item1">列表项1</li>
+    <li id="item2">列表项2</li>
+    <li id="item3">列表项3</li>
+</ul>
+<script>
+    // 获取所有li元素组成的jQuery对象集合
+    const $lis = $('li');
+    // 使用get()方法获取第二个li元素（索引为1），并输出其文本内容
+    const secondLi = $lis.get(1);
+    console.log(secondLi.textContent);
+    // 使用中括号语法获取第三个li元素（索引为2），并修改其文本内容
+    $lis[2].textContent = '新的列表项3';
+    // 使用index()方法获取id为item2的元素在集合中的索引
+    const item2Index = $lis.index($('#item2'));
+    console.log(item2Index);
+    // 使用each()方法遍历所有li元素，为每个元素添加点击事件
+    $lis.each(function (index, element) {
+        $(element).click(function () {
+            console.log(`你点击了第 ${index + 1} 个列表项`);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="outerDiv">
+    <p>这是直接子元素段落</p>
+    <div id="innerDiv">
+        <p>这是后代子元素段落</p>
+    </div>
+</div>
+<script>
+    // 使用子元素选择器，选取id为outerDiv的元素的直接子元素p，并改变其文本颜色为红色
+    $('#outerDiv > p').css('color','red');
+
+    // 使用后代元素选择器，选取id为outerDiv的元素的所有后代元素p，并改变其背景颜色为lightblue
+    $('#outerDiv p').css('backgroundColor', 'lightblue');
+</script>
+</body>
+</html>

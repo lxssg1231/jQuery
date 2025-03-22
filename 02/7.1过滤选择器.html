@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        p {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<p>段落1</p>
+<p>段落2</p>
+<script>
+    // 使用:first选择器，改变第一个段落的文本颜色为红色
+    $('p:first').css('color','red');
+
+    // 使用:last选择器，改变最后一个段落的背景颜色为lightblue
+    $('p:last').css('backgroundColor', 'lightblue');
+
+</script>
+</body>
+</html>

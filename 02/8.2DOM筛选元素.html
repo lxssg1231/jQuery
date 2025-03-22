@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引筛选元素示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">第一个div</div>
+<div class="box">第二个div</div>
+<div id="special">特殊div</div>
+<!--<script>-->
+<!--    // 使用选择器选中所有class为box的div元素-->
+<!--    var divs = $('.box');-->
+<!--    // 使用filter(selector)方法，从class为box的div中筛选出id为special的元素（虽然这里筛选不到，但逻辑如此）-->
+<!--    var specialDiv = divs.filter('#special');-->
+<!--    specialDiv.css('backgroundColor', 'lightblue');-->
+
+<!--    // 使用选择器选中所有div元素-->
+<!--    var allDivs = $('div');-->
+<!--    // 使用filter(function(index))方法，筛选出索引为偶数的div元素-->
+<!--    var evenDivs = allDivs.filter(function (index) {-->
+<!--        return index % 2 === 0;-->
+<!--    });-->
+<!--    evenDivs.css('backgroundColor', 'lightyellow');-->
+<!--</script>-->
+</body>
+
+
+
+</html>

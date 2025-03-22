@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>包含文本的div</div>
+<div><p>包含子元素的div</p></div>
+<div></div>
+<div>另一个包含文本的div</div>
+<script>
+    // 使用:contains选择器，为包含“文本”的div元素添加背景颜色
+    $('div:contains("文本")').css('backgroundColor', 'lightblue');
+
+    // 使用:has选择器，为包含p元素的div元素添加字体加粗样式
+    $('div:has(p)').css('fontWeight', 'bold');
+
+    // 使用:empty选择器，为空白的div元素添加红色边框
+    $('div:empty').css('borderColor','red');
+
+    // 使用:parent选择器，为包含子元素或文本的div元素添加黄色背景
+    $('div:parent').css('backgroundColor', 'lightyellow');
+</script>
+</body>
+
+</html>

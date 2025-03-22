@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域选择器示例</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        a,
+        input {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<a href="https://www.example.com">示例链接1</a>
+<a href="https://www.example.org">示例链接2</a>
+<input type="text" placeholder="文本框">
+<input type="password" placeholder="密码框">
+<div class="content active">内容区域</div>
+<script>
+    // 使用[href]选择器，为包含href属性的a元素添加背景颜色
+    $('[href]').css('backgroundColor', 'lightblue');
+
+    // 使用[type="text"]选择器，为type属性值为text的input元素添加边框颜色
+    $('[type="text"]').css('borderColor','red');
+
+    // 使用[href*="org"]选择器，为href属性值包含“org”的a元素添加字体颜色
+    $('[href*="org"]').css('color', 'green');
+
+    // 使用[class~="active"]选择器，为class属性值包含“active”单词的元素添加黄色背景
+    $('[class~="active"]').css('backgroundColor', 'lightyellow');
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂函数$()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="myDiv">这是一个原生DOM元素</div>
+<button onclick="modifyElement()">点击修改内容</button>
+<script>
+    function modifyElement() {
+        // 原生JavaScript获取DOM元素
+        const nativeElement = document.getElementById("myDiv");
+
+        // 通过工厂函数 $() 转换为jQuery对象
+        const $jqueryObj = $(nativeElement);
+
+        // 使用jQuery方法操作元素
+        $jqueryObj.css("color", "red");
+        $jqueryObj.text("通过jQuery修改后的内容！");
+
+        // 也可以直接使用 $() 选择器
+        $("#myDiv").fadeOut(1000).fadeIn(1000);
+    }
+</script>
+</body>
+</html>
