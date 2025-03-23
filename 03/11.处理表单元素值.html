@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<input type="text" id="userInput" value="默认值">
+<input type="checkbox" id="checkbox1" value="option1">选项1
+<input type="checkbox" id="checkbox2" value="option2">选项2
+<select id="selectList">
+    <option value="value1">选项值1</option>
+    <option value="value2">选项值2</option>
+</select>
+<button onclick="handleFormValues()">处理表单值</button>
+<script>
+    function handleFormValues() {
+        // 获取文本输入框的值
+        var inputValue = $("#userInput").val();
+        console.log("文本输入框的值是：", inputValue);
+
+        // 设置文本输入框的值
+        $("#userInput").val("新的输入值");
+
+        // 设置复选框和下拉框的选中状态
+        $("#checkbox1, #checkbox2").val(["option1"]);
+        $("#selectList").val(["value2"]);
+
+        // 再次获取文本输入框的值
+        var newInputValue = $("#userInput").val();
+        console.log("设置后的文本输入框的值是：", newInputValue);
+    }
+</script>
+</body>
+
+</html>

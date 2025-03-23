@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+<p id="myPara">这是一个段落</p>
+<button onclick="setAndGetStyle()">设置和获取样式</button>
+<script>
+    function setAndGetStyle() {
+        // 使用css(name, value)设置样式
+        $("#myPara").css("color", "red");
+
+        // 使用css(properties)设置多个样式
+        $("#myPara").css({
+            "font-weight": "bold",
+            "text-decoration": "underline"
+        });
+
+        // 使用css(name)获取样式
+        var fontSize = $("#myPara").css("font-size");
+        console.log("段落的字体大小是：", fontSize);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<div id="myDiv">
+    <p>这是原来的段落</p>
+</div>
+<button onclick="getContentAndSetContent()">获取和设置内容</button>
+<script>
+    function getContentAndSetContent() {
+        // 使用html()获取元素的HTML内容
+        var htmlContent = $("#myDiv").html();
+        console.log("div的HTML内容是：", htmlContent);
+
+        // 使用html()设置元素的HTML内容
+        $("#myDiv").html("<p>这是新的HTML内容</p>");
+
+        // 使用text()获取元素的文本内容
+        var textContent = $("#myDiv").text();
+        console.log("div的文本内容是：", textContent);
+
+        // 使用text()设置元素的文本内容
+        $("#myDiv").text("这是最终的文本内容");
+    }
+</script>
+</body>
+</html>
