@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+<p id="myPara">这是一个段落</p>
+<button id="addClassBtn">添加类</button>
+<button id="removeClassBtn">删除类</button>
+<button id="toggleClassBtn">切换类</button>
+<script>
+    $(function () {
+        // 为“添加类”按钮绑定点击事件
+        $("#addClassBtn").click(function () {
+            $("#myPara").addClass("highlight active");
+        });
+
+        // 为“删除类”按钮绑定点击事件
+        $("#removeClassBtn").click(function () {
+            $("#myPara").removeClass("highlight");
+        });
+
+        // 为“切换类”按钮绑定点击事件
+        $("#toggleClassBtn").click(function () {
+            $("#myPara").toggleClass("active");
+        });
+    });
+</script>
+</body>
+</html>
