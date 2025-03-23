@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<button id="originalBtn">点击我</button>
+<div id="target"></div>
+<script>
+    // 为原按钮绑定点击事件
+    $("#originalBtn").click(function () {
+        alert("原按钮被点击了");
+    });
+    // 不复制事件的情况
+    var clonedBtnWithoutEvent = $("#originalBtn").clone();
+    // 将不复制事件的按钮追加到target div中
+    clonedBtnWithoutEvent.appendTo("#target");
+    // 复制事件的情况
+    var clonedBtnWithEvent = $("#originalBtn").clone(true);
+    // 将复制事件的按钮追加到target div中
+    clonedBtnWithEvent.appendTo("#target");
+</script>
+</body>
+</html>

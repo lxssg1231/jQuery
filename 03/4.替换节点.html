@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<p id="oldPara">这是旧的段落</p>
+<script>
+    // replaceWith()方法示例
+    var newDiv = $("<div>这是新的div元素</div>");
+    $("#oldPara").replaceWith(newDiv);
+
+    // replaceAll()方法示例
+    var newSpan = $("<span>这是新的span元素</span>");
+    newSpan.replaceAll("#oldPara");
+</script>
+</body>
+</html>

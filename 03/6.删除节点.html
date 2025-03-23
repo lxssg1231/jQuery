@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <p>段落1</p>
+    <p>段落2</p>
+</div>
+<button id="emptyBtn">清空div内容</button>
+<button id="removeBtn">删除div</button>
+<script>
+    // 为“清空div内容”按钮绑定点击事件
+    $("#emptyBtn").click(function () {
+        $("#container").empty();
+        console.log("div的子元素已被清空");
+    });
+
+    // 为“删除div”按钮绑定点击事件
+    $("#removeBtn").click(function () {
+        $("#container").remove();
+        console.log("div及其子元素已被删除");
+    });
+</script>
+</body>
+</html>
