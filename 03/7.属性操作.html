@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<a id="myLink" href="https://oldurl.com">点击我</a>
+<input type="text" id="myInput" disabled>
+<button onclick="attrOperations()">执行属性操作</button>
+<script>
+    function attrOperations() {
+        // 获取属性值
+        var hrefValue = $('#myLink').attr('href');
+        console.log('链接的原始href值:', hrefValue);
+
+        // 设置单个属性值
+        $('#myLink').attr('href', 'https://newurl.com');
+        console.log('链接的新href值:', $('#myLink').attr('href'));
+
+        // 一次性设置多个属性值
+        $('#myInput').attr({
+            'disabled': false,
+            'placeholder': '请输入内容'
+        });
+
+        // 删除属性
+        $('#myInput').removeAttr('placeholder');
+    }
+</script>
+</body>
+</html>
