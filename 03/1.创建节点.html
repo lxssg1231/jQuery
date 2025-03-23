@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    // 创建一个简单的节点
+    var simpleNode = $("<p>这是一个新创建的段落节点</p>");
+    // 将创建的简单节点添加到id为container的div中
+    $("#container").append(simpleNode);
+
+    // 创建一个复杂的HTML代码片段节点
+    var complexNode = $('<div><h2>标题</h2><p>这是复杂节点中的段落内容</p></div>');
+    // 将创建的复杂节点也添加到id为container的div中
+    $("#container").append(complexNode);
+</script>
+</body>
+</html>

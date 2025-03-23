@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<p>段落1</p>
+<p>段落2</p>
+<div id="container">
+    <span>子元素1</span>
+    <span>子元素2</span>
+</div>
+<script>
+    // wrap()方法示例
+    $("p").wrap("<div class='wrap-p'></div>");
+
+    // wrapAll()方法示例
+    $("p").wrapAll("<div class='wrap-all-p'></div>");
+
+    // wrapInner()方法示例
+    $("#container").wrapInner("<div class='wrap-inner'></div>");
+</script>
+</body>
+</html>

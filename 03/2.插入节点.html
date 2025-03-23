@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="target">这是目标div</div>
+<script>
+    // 创建新的节点
+    var newPara = $("<p>这是新插入的段落</p>");
+    // append()示例
+    $("#target").append(newPara.clone());
+    // appendTo()示例，效果和append()类似，语法不同
+    newPara.clone().appendTo("#target");
+    // prepend()示例
+    var newSpan = $("<span>前置内容：</span>");
+    $("#target").prepend(newSpan.clone());
+    // prependTo()示例，效果和prepend()类似，语法不同
+    newSpan.clone().prependTo("#target");
+    // after()示例
+    var newDiv = $("<div>这是在目标div之后插入的div</div>");
+    $("#target").after(newDiv.clone());
+    // insertAfter()示例，效果和after()类似，语法不同
+    newDiv.clone().insertAfter("#target");
+    // before()示例
+    var newH3 = $("<h3>这是在目标div之前插入的标题</h3>");
+    $("#target").before(newH3.clone());
+    // insertBefore()示例，效果和before()类似，语法不同
+    newH3.clone().insertBefore("#target");
+</script>
+</body>
+</html>
