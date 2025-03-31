@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="div1">区域1</div>
+<div id="div2">区域2</div>
+<div id="result"></div>
+<script>
+    $(function () {
+        $('#div1').mouseout(function (event) {
+            var targetId = $(event.relatedTarget).attr('id');
+            var message = '鼠标移出区域1，进入的元素ID为：' + targetId;
+            $('#result').html(message);
+        });
+        $('#div2').mouseover(function (event) {
+            var targetId = $(event.relatedTarget).attr('id');
+            var message = '鼠标移入区域2，离开的元素ID为：' + targetId;
+            $('#result').html(message);
+        });
+    });
+</script>
+</body>
+
+</html>

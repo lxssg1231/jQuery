@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="inputField" placeholder="请输入内容">
+<div id="result"></div>
+<script>
+    $(function () {
+        $('#inputField').keydown(function (event) {
+            var key = event.keyCode;
+            var message = '你按下的键的keyCode值为：' + key;
+            if (key >= 65 && key <= 90) {
+                // 判断是否为字母键
+                if (event.shiftKey) {
+                    message += '，输入的是大写字母';
+                } else {
+                    message += '，输入的是小写字母';
+                }
+            }
+            $('#result').html(message);
+        });
+    });
+</script>
+</body>
+
+</html>

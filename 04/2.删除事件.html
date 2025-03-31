@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="myButton">点击我</button>
+<button id="removeHandlerButton">移除点击事件处理程序</button>
+<button id="removeAllHandlerButton">移除所有事件处理程序</button>
+<script>
+    $(function () {
+        // 为按钮绑定点击事件处理程序
+        $('#myButton').click(function () {
+            console.log('按钮被点击了，这是第一个处理函数');
+        });
+        $('#myButton').click(function () {
+            console.log('按钮被点击了，这是第二个处理函数');
+        });
+        // 点击“移除点击事件处理程序”按钮，移除第二个点击事件处理函数
+        $('#removeHandlerButton').click(function () {
+            // 先定义要移除的函数
+            var secondHandler = function () {
+                console.log('按钮被点击了，这是第二个处理函数');
+            };
+            $('#myButton').unbind('click', secondHandler);
+        });
+        // 点击“移除所有事件处理程序”按钮，移除#myButton上的所有事件处理程序
+        $('#removeAllHandlerButton').click(function () {
+            $('#myButton').unbind();
+        });
+    });
+</script>
+</body>
+
+</html>

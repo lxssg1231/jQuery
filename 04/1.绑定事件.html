@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="bindButton">点击测试bind</button>
+<button id="oneButton">点击测试one</button>
+<script>
+    // 使用bind方法绑定点击事件
+    $('#bindButton').bind('click', { message: '这是通过bind绑定的点击事件' }, function (event) {
+        console.log(event.data.message);
+        console.log('按钮被点击了，这是bind绑定的处理函数');
+    });
+
+    // 使用one方法绑定点击事件
+    $('#oneButton').one('click', { message: '这是通过one绑定的点击事件' }, function (event) {
+        console.log(event.data.message);
+        console.log('按钮被点击了，这是one绑定的处理函数，只会执行一次');
+    });
+</script>
+</body>
+</html>

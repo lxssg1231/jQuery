@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    $(document).on('click', function (event) {
+        var message = '';
+        if (event.altKey) {
+            message += '你按下了Alt键 ';
+        }
+        if (event.ctrlKey) {
+            message += '你按下了Ctrl键 ';
+        }
+        if (message === '') {
+            message = '你没有按下Alt键和Ctrl键';
+        }
+        $('#result').html(message);
+    });
+</script>
+</body>
+
+</html>

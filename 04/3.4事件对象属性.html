@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    $(document).on('mousemove', function (event) {
+        var x = event.pageX;
+        var y = event.pageY;
+        var message = '鼠标当前位置：水平坐标（pageX）为 ' + x + '，垂直坐标（pageY）为 ' + y;
+        $('#result').html(message);
+    });
+</script>
+</body>
+
+</html>

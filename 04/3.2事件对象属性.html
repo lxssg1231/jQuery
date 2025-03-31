@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="myButton">点击我</button>
+<div id="result"></div>
+<script>
+    $(function () {
+        var productData = { id: 1, name: '示例商品' };
+        $('#myButton').bind('click', productData, function (event) {
+            var message = '点击按钮，获取到的数据：';
+            message += '商品ID为 ' + event.data.id + '，商品名称为 ' + event.data.name;
+            $('#result').html(message);
+        });
+    });
+</script>
+</body>
+
+</html>
