@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="myButton">点击我</button>
+<script>
+    $(document).ready(function() {
+        $('#myButton').click(function(event) {
+            if (event.shiftKey) {
+                console.log('你按下了 Shift 键并点击了按钮');
+            } else {
+                console.log('你没有按下 Shift 键点击按钮');
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

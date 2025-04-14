@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).click(function(event) {
+        var x = event.screenX;
+        var y = event.screenY;
+        console.log('鼠标点击位置 - 屏幕水平坐标（screenX）:', x);
+        console.log('鼠标点击位置 - 屏幕垂直坐标（screenY）:', y);
+    });
+</script>
+</body>
+
+</html>

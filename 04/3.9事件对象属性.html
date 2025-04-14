@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).on('keydown click', function(event) {
+        if (event.type === 'keydown') {
+            console.log('按下的键编码（which）:', event.which);
+            console.log('原始键盘事件对象（originalEvent）:', event.originalEvent);
+        } else if (event.type === 'click') {
+            console.log('按下的鼠标键（which）:', event.which);
+            console.log('原始鼠标事件对象（originalEvent）:', event.originalEvent);
+        }
+    });
+</script>
+</body>
+</html>

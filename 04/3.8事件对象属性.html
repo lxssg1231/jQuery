@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="parentDiv">
+    <button id="btn1">按钮 1</button>
+    <button id="btn2">按钮 2</button>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#parentDiv').on('click', function(event) {
+            console.log('事件触发元素（target）:', $(event.target).attr('id'));
+            console.log('事件类型（type）:', event.type);
+        });
+    });
+</script>
+</body>
+</html>
