@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="bindButton">绑定事件</button>
+<button id="unbindButton">解除事件</button>
+<div id="targetDiv">点击我试试</div>
+<script>
+    $(document).ready(function() {
+        // 为“绑定事件”按钮绑定点击事件
+        $('#bindButton').click(function() {
+            $('#targetDiv').click(function() {
+                console.log('div 被点击了');
+            });
+        });
+        // 为“解除事件”按钮绑定点击事件
+        $('#unbindButton').click(function() {
+            $('#targetDiv').unbind('click');
+            console.log('div 的点击事件已解除');
+        });
+    });
+</script>
+</body>
+</html>

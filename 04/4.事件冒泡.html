@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        /* 设置 div 样式 */
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        /* 设置 p 样式 */
+        #myP {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<!-- 页面内容 -->
+<div id="myDiv">
+    <p id="myP">点击我</p>
+</div>
+<script>
+    $(document).ready(function () {
+        // 为 div 绑定点击事件
+        $('#myDiv').click(function () {
+            console.log('div 元素的 click 事件被触发');
+        });
+        // 为 p 绑定点击事件
+        $('#myP').click(function () {
+            console.log('p 元素的 click 事件被触发');
+        });
+        // 为 body 绑定点击事件
+        $(document.body).click(function () {
+            console.log('body 元素的 click 事件被触发');
+        });
+    });
+</script>
+</body>
+</html>

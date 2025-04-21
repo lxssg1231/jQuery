@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="myInput" placeholder="输入内容">
+<button id="triggerButton">trigger 触发</button>
+<button id="triggerHandlerButton">triggerHandler 触发</button>
+<script>
+    $(document).ready(function() {
+        $('#myInput').focus(function() {
+            console.log('focus 事件处理函数被触发');
+        });
+        $('#triggerButton').click(function() {
+            $('#myInput').trigger('focus');
+        });
+        $('#triggerHandlerButton').click(function() {
+            $('#myInput').triggerHandler('focus');
+        });
+    });
+</script>
+</body>
+</html>

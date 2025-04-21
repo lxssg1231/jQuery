@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery中的事件与动画</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<button id="myButton">点击我</button>
+<script>
+    $(document).ready(function() {
+        // 为按钮绑定点击事件处理函数
+        $('#myButton').click(function() {
+            console.log('按钮被点击了');
+        });
+        // 模拟按钮点击事件
+        $('#myButton').trigger('click');
+    });
+</script>
+</body>
+</html>
